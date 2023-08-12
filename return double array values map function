@@ -1,0 +1,7 @@
+export const doubleNumbers = (numbers) => {
+    // Edit this line
+    const doubledNumbers=numbers.map((num,idx)=>{
+        return num*2;
+    });
+    return doubledNumbers
+}
