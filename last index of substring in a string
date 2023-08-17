@@ -1,0 +1,24 @@
+//method 1
+export const findLastIndexOf = (string, substring) => {
+  const stringLength = string.length;
+  const substringLength = substring.length;
+  
+  for (let i = stringLength - substringLength; i >= 0; i--) {
+    let j;
+    for (j = 0; j < substringLength; j++) {
+      if (string[i + j] !== substring[j]) {
+        break;
+      }
+    }
+    if (j === substringLength) {
+      return i;
+    }
+  }
+  
+  return -1;
+}
+
+//method 2
+export const findLastIndexOf = (string, substring) => {
+  return string.lastIndexOf(substring);
+}
